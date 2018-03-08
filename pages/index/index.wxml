@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="search-content">
+    <icon type='search' size='12' class='search-icon'></icon>
+    <input placeholder='空空如也' class='search-input' confirm-type='搜索' />
+  </view>
+  <view class='swiper-container'>
+    <swiper class='swiper-box' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' bindchange='swiperChange'>
+      <block wx:for="{{banners}}">
+        <swiper-item>
+          <image src='{{item.pic}}' class='slide-image'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='dots'>
+      <block wx:for='{{banners}}' wx:key='id'>
+        <view class='dot {{index==swiperCurrent?"active":""}}'></view>
+      </block>
+    </view>
+  </view>
+  <view class='shotcuts'>
+    <view class='shotcuts-item'>
+      <icon class="iconfont icon-cainixihuan"></icon>
+      <text>猜你喜欢</text>
+    </view>
+    <view class='shotcuts-item'>
+      <icon class="iconfont icon-music"></icon>
+      <text>歌单</text>
+    </view>
+    <view class='shotcuts-item'>
+      <icon class="iconfont icon-cnlonghubang"></icon>
+      <text>排行榜</text>
+    </view>
+    <view class='shotcuts-item'>
+      <icon class="iconfont icon-glass"></icon>
+      <text>电台</text>
+    </view>
+    <view class='shotcuts-item'>
+      <icon class="iconfont icon-diantai"></icon>
+      <text>音乐视频</text>
+    </view>
+  </view>
+
+  <view class='block'>
+    <view class='block-item'>
+      <image src='/images/music-block.jpg' class="music"/>
+      <text>每日推荐30首 ></text>
+    </view>
+    <view class='block-item'>
+      <image src='/images/music-block.jpg' class="music"/>
+      <text>听见不同 ></text>
+    </view>
+    <view class='block-item'>
+      <image src='/images/music-block.jpg' class="music"/>
+      <text>随心.听 ></text>
+    </view>
+  </view>
+
+  <view class='toutiao-container'>
+    <swiper class='toutiao-swiper' vertical="true" autoplay="true" interval="3000" duration="1000">
+      <block wx:for="{{toutiaos}}">
+        <swiper-item>
+          <view class='toutiao-item'>
+            <image src='{{item.pic}}' class='toutiao-pic'></image>
+            <view class='toutiao-content'>
+              <view class='tap'>头条</view>
+              <text>{{item.content}}</text>
+            </view>
+            <view class='iconfont icon-arrow-right'></view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='audio-container' style='margin-top: 20rpx;margin-bottom: 20rpx'>
+    <audio poster='/images/poster-howlong.jpg' name="how long" author="Charli" src="http://7xp1db.com1.z0.glb.clouddn.com/how-long.mp3" id="myAudio" controls loop></audio>
+  </view>
+
+  <view class='audio-list'>
+    <block wx:for="{{audios}}" wx:for-item="item" wx:key="id">
+      <view class='audio-item' >
+        <image src='{{item.poster}}' class='audio-poster'></image>
+        <view class='audio-content'>
+          <view class='audio-name'>{{item.name}}</view>
+          <view class='audio-author'>{{item.author}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

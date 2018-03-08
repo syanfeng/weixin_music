@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/userInfo/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#FFA500",
+    "list": [
+      {
+        "iconPath": "images/faxian.png",
+        "selectedIconPath": "images/faxian-selected.png",
+        "pagePath": "pages/index/index",
+        "text": "发现"
+      },
+      {
+        "iconPath": "images/erji.png",
+        "selectedIconPath": "images/erji-selected.png",
+        "pagePath": "pages/userInfo/index",
+        "text": "我的音乐"
+      },
+      {
+        "iconPath": "images/music.png",
+        "selectedIconPath": "images/music-selected.png",
+        "pagePath": "pages/index/index",
+        "text": "播放"
+      },
+      {
+        "iconPath": "images/face.png",
+        "selectedIconPath": "images/face-selected.png",
+        "pagePath": "pages/userInfo/index",
+        "text": "动态"
+      },
+      {
+        "iconPath": "images/menu.png",
+        "selectedIconPath": "images/menu-selected.png",
+        "pagePath": "pages/userInfo/index",
+        "text": "账号"
+      }
+    ]
+  }
+}
